@@ -65,7 +65,7 @@
             // 
             // sqlConnection1
             // 
-            this.sqlConnection1.ConnectionString = "Data Source=ecologdb;Initial Catalog=ECOLOGDBver2;Integrated Security=True;Connection Timeout=0";
+            this.sqlConnection1.ConnectionString = "Data Source=ecologdb2016;Initial Catalog=ECOLOGDBver3;Integrated Security=True;Connection Timeout=0";
             this.sqlConnection1.FireInfoMessageEventOnUserErrors = false;
             // 
             // label1
