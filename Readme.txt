@@ -1,6 +1,13 @@
-SENSOR_ID = 19�͌��ߑł��ŃC���T�[�g�����s���Ă���B
+***2018/5/24 isobe追記***
+・プログラムの実行に際して
+実行ファイルと同じディレクトリに「LastUpdate.txt（最終更新履歴）」「Log.txt（エラーや実行のログ）」「monitorPath.txt（インサートする画像ファイルが存在するパス）」の3種類のテキストファイルを作る必要アリ。このうち、LastUpdate.txtとmonitorPath.txtは空だとプログラムが実行できないため、適当な"YYYY/MM/DD hh:mm:ss"と適切なパスを1行目に入力しておくこと。
 
-�O�o�[�W�����ŃC���T�[�g�����s���Ă����̂́ADB�Q�Ɛ��"ECOLOGDB"�Ƃ��Ă������߁B"ECOLOGDBver2"�ɕύX�ς�
+あとは、「監視開始」をクリックすることでプログラム内で指定したフォルダにインサートが開始される。
 
-�^�C���A�E�g���������邽�߁ASqlConnection�̃C���X�^���X��������Timeout=0�i�������j�ɐݒ�B
-�����������Ƀ^�C���A�E�g����������ꍇ������B
+***以下の問題は修正済み？***
+SENSOR_ID = 19は決め打ちでインサートを実行している。
+
+前バージョンでインサートが失敗していたのは、DB参照先を"ECOLOGDB"としていたため。"ECOLOGDBver2"に変更済み
+
+タイムアウトが発生するため、SqlConnectionのインスタンス生成時にTimeout=0（無制限）に設定。
+ただし未だにタイムアウトが発生する場合もあり。
